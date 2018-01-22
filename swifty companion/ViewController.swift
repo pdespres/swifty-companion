@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     @IBAction func btSearch(_ sender: Any) {
 
         Alamofire.request(
-            URL(string: "https://api.intra.42.fr/v2/users/29795")!,
-//            parameters: ["access_token": Global.tokenId!, "filter[login]": textLogin.text!])
-            parameters: ["access_token": Global.tokenId!])
+            URL(string: "https://api.intra.42.fr/v2/users")!,
+//            parameters: ["access_token": Global.tokenId!, "filter[login]": "\(textLogin.text!)"])
+            parameters: ["access_token": Global.tokenId!, "range[login]": "\(textLogin.text!),\(textLogin.text!)zpres"])
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else {

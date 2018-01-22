@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		355B236B2016021E002295F2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236A2016021E002295F2 /* Token.swift */; };
+		355B236D20165430002295F2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236C20165430002295F2 /* DetailViewController.swift */; };
 		35E1BF912015D5960005E71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1BF902015D5960005E71A /* AppDelegate.swift */; };
 		35E1BF932015D5960005E71A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1BF922015D5960005E71A /* ViewController.swift */; };
 		35E1BF962015D5960005E71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E1BF942015D5960005E71A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		355B236A2016021E002295F2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		355B236C20165430002295F2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		35E1BF8D2015D5960005E71A /* swifty companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E1BF902015D5960005E71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E1BF922015D5960005E71A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				35E1BF942015D5960005E71A /* Main.storyboard */,
 				35E1BF972015D5960005E71A /* Assets.xcassets */,
 				355B236A2016021E002295F2 /* Token.swift */,
+				355B236C20165430002295F2 /* DetailViewController.swift */,
 				35E1BF992015D5960005E71A /* LaunchScreen.storyboard */,
 				35E1BF9C2015D5960005E71A /* Info.plist */,
 			);
@@ -225,6 +228,7 @@
 				355B236B2016021E002295F2 /* Token.swift in Sources */,
 				35E1BF932015D5960005E71A /* ViewController.swift in Sources */,
 				35E1BF912015D5960005E71A /* AppDelegate.swift in Sources */,
+				355B236D20165430002295F2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
