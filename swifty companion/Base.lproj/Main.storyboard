@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCW-qM-sAl">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swifty Companion-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swifty_companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckI-yD-DYP">
+                                <rect key="frame" x="78" y="246" width="164" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="5eK-yg-tqb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="42" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-Lm-8Jx">
+                                <rect key="frame" x="85" y="64" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="rhj-0w-612"/>
+                                    <constraint firstAttribute="height" constant="150" id="x7K-Bg-z9a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5d-0V-uTR">
+                                <rect key="frame" x="136" y="286" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="btSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pse-UK-qAm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6fS-Lm-8Jx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="80J-sO-YbA"/>
+                            <constraint firstItem="W5d-0V-uTR" firstAttribute="top" secondItem="ckI-yD-DYP" secondAttribute="bottom" constant="10" id="NzS-RA-sbT"/>
+                            <constraint firstItem="ckI-yD-DYP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d99-RV-hhv"/>
+                            <constraint firstItem="6fS-Lm-8Jx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gmX-Rc-rT4"/>
+                            <constraint firstItem="ckI-yD-DYP" firstAttribute="top" secondItem="6fS-Lm-8Jx" secondAttribute="bottom" constant="32" id="lex-jk-aH1"/>
+                            <constraint firstItem="W5d-0V-uTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qkQ-ma-14D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swifty Companion" id="EPs-C3-5Ae"/>
+                    <connections>
+                        <outlet property="textLogin" destination="ckI-yD-DYP" id="EWj-Ob-Imw"/>
+                        <segue destination="NfP-H1-xb2" kind="show" identifier="segTo" id="2D0-SL-GqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511.875" y="110"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="o05-7L-dtb">
+            <objects>
+                <viewController id="NfP-H1-xb2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3k2-My-cYO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="rv2-aV-CJw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="C3u-R1-a6t">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="DBS-5r-hQ1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbW-LT-SB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l93-4N-Syq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCW-qM-sAl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="auu-rw-13i">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p8P-kf-uKa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLq-Td-NdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-158" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="42" width="225" height="225"/>
+    </resources>
+</document>
