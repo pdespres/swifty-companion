@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350C4291201796F100535E6A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C4290201796F100535E6A /* TabBarViewController.swift */; };
 		355B236B2016021E002295F2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236A2016021E002295F2 /* Token.swift */; };
-		355B236D20165430002295F2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236C20165430002295F2 /* DetailViewController.swift */; };
+		355B236D20165430002295F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236C20165430002295F2 /* ProfileViewController.swift */; };
+		35DA45ED2017265D009937FE /* LoginSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DA45EC2017265D009937FE /* LoginSearchTable.swift */; };
+		35DA45EF20172A14009937FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DA45EE20172A14009937FE /* User.swift */; };
 		35E1BF912015D5960005E71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1BF902015D5960005E71A /* AppDelegate.swift */; };
 		35E1BF932015D5960005E71A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1BF922015D5960005E71A /* ViewController.swift */; };
 		35E1BF962015D5960005E71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E1BF942015D5960005E71A /* Main.storyboard */; };
@@ -18,8 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350C4290201796F100535E6A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		355B236A2016021E002295F2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		355B236C20165430002295F2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		355B236C20165430002295F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		35DA45EC2017265D009937FE /* LoginSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSearchTable.swift; sourceTree = "<group>"; };
+		35DA45EE20172A14009937FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35E1BF8D2015D5960005E71A /* swifty companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E1BF902015D5960005E71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E1BF922015D5960005E71A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +76,10 @@
 				35E1BF942015D5960005E71A /* Main.storyboard */,
 				35E1BF972015D5960005E71A /* Assets.xcassets */,
 				355B236A2016021E002295F2 /* Token.swift */,
-				355B236C20165430002295F2 /* DetailViewController.swift */,
+				35DA45EC2017265D009937FE /* LoginSearchTable.swift */,
+				35DA45EE20172A14009937FE /* User.swift */,
+				350C4290201796F100535E6A /* TabBarViewController.swift */,
+				355B236C20165430002295F2 /* ProfileViewController.swift */,
 				35E1BF992015D5960005E71A /* LaunchScreen.storyboard */,
 				35E1BF9C2015D5960005E71A /* Info.plist */,
 			);
@@ -227,8 +236,11 @@
 			files = (
 				355B236B2016021E002295F2 /* Token.swift in Sources */,
 				35E1BF932015D5960005E71A /* ViewController.swift in Sources */,
+				35DA45EF20172A14009937FE /* User.swift in Sources */,
 				35E1BF912015D5960005E71A /* AppDelegate.swift in Sources */,
-				355B236D20165430002295F2 /* DetailViewController.swift in Sources */,
+				350C4291201796F100535E6A /* TabBarViewController.swift in Sources */,
+				355B236D20165430002295F2 /* ProfileViewController.swift in Sources */,
+				35DA45ED2017265D009937FE /* LoginSearchTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
