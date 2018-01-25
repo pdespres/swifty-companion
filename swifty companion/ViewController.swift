@@ -18,10 +18,16 @@ class ViewController: UIViewController {
      override func viewDidLoad() {
         super.viewDidLoad()
         token = Token()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background.png")
-        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+       
+        let backgroundImage = UIImage(named: "background.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        imageView.contentMode = .scaleAspectFill
+        
+        self.view.insertSubview(imageView, at: 0)
+        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LoginSearchTable") as! LoginSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable as UISearchResultsUpdating

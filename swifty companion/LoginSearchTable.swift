@@ -54,8 +54,10 @@ extension LoginSearchTable : UISearchResultsUpdating {
         // search begin arbitrary @3 char length
         if (searchBarText.count) < 3 {
             self.matchingItems = []
+            self.tableView.reloadData()
             return
         } else if (searchBarText.count) > 3 && (searchBarText.count) > stkCount && self.matchingItems.count == 0 {
+//            print("track count \(searchBarText.count) items \(self.matchingItems.count)")
             return
         }
         self.matchingItems = []
@@ -68,6 +70,8 @@ extension LoginSearchTable : UISearchResultsUpdating {
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("Error while fetching users: \(String(describing: response.result.error))")
+                    self.matchingItems = []
+                    self.tableView.reloadData()
                     return
                 }
                 let json = JSON(response.result.value!)

@@ -19,9 +19,29 @@ class User {
     var location: String?
     var image: String?
     var isStaff: Bool?
+    var campus: String?
+    var cursus: String?
+    var cursusId: Int?
+    var level: Float?
+    var projects: [Project] = []
+    var skills: [(String, Float)] = []
     
     init(login: String, id: Int) {
         self.login = login
         self.id = id
+    }
+}
+
+class Project {
+    var name: String
+    var mark: Int?
+    var validated: Bool?
+    var status: String?
+    
+    init(name: String, mark: Int, validated: Bool, status: String) {
+        self.name = name
+        self.mark = mark
+        self.validated = validated
+        self.status = status
     }
 }
