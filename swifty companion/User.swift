@@ -33,15 +33,19 @@ class User {
 }
 
 class Project {
+    var id: Int
     var name: String
     var mark: Int?
     var validated: Bool?
     var status: String?
+    var subproj: [Project]
     
-    init(name: String, mark: Int, validated: Bool, status: String) {
+    init(id: Int, name: String, mark: Int, validated: Bool, status: String, subproj: [Project]) {
+        self.id = id
         self.name = name
         self.mark = mark
         self.validated = validated
         self.status = status
+        self.subproj = subproj
     }
 }

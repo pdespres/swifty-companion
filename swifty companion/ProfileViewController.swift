@@ -54,12 +54,10 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         level.layer.masksToBounds = true
         level.layer.cornerRadius = 30
         loadUserData()
-        print("end of viewdidload")
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("viewdidappear")
-        act_ind.stopAnimating()
+//        act_ind.stopAnimating()
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,8 +89,10 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
                 self.user?.isStaff = self.json["staff?"].bool
                 let e = self.json["campus"].arrayValue.map{($0["name"])}
                 self.user?.campus = e[0].stringValue
-                for index in 1...(e.count - 1) {
-                    self.user?.campus = "\(self.user?.campus ?? "?"), \(e[index])"
+                if e.count > 1 {
+                    for index in 2...e.count {
+                        self.user?.campus = "\(self.user?.campus ?? "?"), \(e[index - 1])"
+                    }
                 }
                 let a = self.json["titles_users"].array?.filter({$0["selected"].stringValue == "true"}) ?? []
                 if a.count > 0 {
@@ -116,10 +116,12 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
                     let e = subJson["cursus_ids"]
                     for index in 0...e.count {
                         if e[index].intValue == self.user?.cursusId {
-                            let p = Project(name: subJson["project"]["name"].stringValue,
+                            let p = Project(id: subJson["project"]["id"].intValue,
+                                            name: subJson["project"]["name"].stringValue,
                                             mark: subJson["final_mark"].intValue,
                                             validated: subJson["validated?"].boolValue,
-                                            status: subJson["status"].stringValue)
+                                            status: subJson["status"].stringValue,
+                                            subproj: [])
                             self.user?.projects.append(p)
                         }
                     }
@@ -129,6 +131,24 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
                         return $0.status! > $1.status!
                     } else {
                         return $0.name < $1.name
+                    }
+                }
+                let m = self.json["projects_users"].array?.filter({$0["project"]["parent_id"].stringValue != ""}) ?? []
+                for subJson: JSON in m {
+                    let e = subJson["cursus_ids"]
+                    for index in 0...e.count {
+                        if e[index].intValue == self.user?.cursusId {
+                            if let i = self.user?.projects.index(where: { $0.id == subJson["project"]["parent_id"].intValue }) {
+                                let p = Project(id: subJson["project"]["id"].intValue,
+                                                name: subJson["project"]["name"].stringValue,
+                                                mark: subJson["final_mark"].intValue,
+                                                validated: subJson["validated?"].boolValue,
+                                                status: subJson["status"].stringValue,
+                                                subproj: [])
+                                print(p)
+                                self.user?.projects[i].subproj.append(p)
+                            }
+                        }
                     }
                 }
                 let tbvc = self.tabBarController as! TabBarViewController
@@ -166,6 +186,7 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
             level.text = String(format: "%.2f", (self.user?.level)!)
             level.isHidden = false
         }
+        act_ind.stopAnimating()
     }
  
     func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

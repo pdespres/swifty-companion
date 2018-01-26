@@ -68,7 +68,9 @@ class SkillsViewController: UIViewController, UITableViewDataSource {
         progressBar.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 15).isActive = true
         progressBar.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -15).isActive = true
         progressBar.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        progressBar.animateTo(progress: CGFloat(selectedItem!.1 / 20))
+        UIView.animate(withDuration: 0.5, delay: 1, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            progressBar.animateTo(progress: CGFloat(selectedItem!.1 / 20))
+            }, completion: nil)
         
         cell.backgroundColor = .clear
         cell.backgroundColor = UIColor(white: 0, alpha: 0.2)

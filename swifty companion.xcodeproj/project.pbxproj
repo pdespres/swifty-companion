@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		350C4291201796F100535E6A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C4290201796F100535E6A /* TabBarViewController.swift */; };
+		35554168201B78A000E175CF /* Projects2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35554167201B78A000E175CF /* Projects2TableViewCell.swift */; };
 		355B236B2016021E002295F2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236A2016021E002295F2 /* Token.swift */; };
 		355B236D20165430002295F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B236C20165430002295F2 /* ProfileViewController.swift */; };
 		35CB7146201A030400D2C027 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB7145201A030400D2C027 /* ProjectsViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		350C4290201796F100535E6A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		35554167201B78A000E175CF /* Projects2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects2TableViewCell.swift; sourceTree = "<group>"; };
 		355B236A2016021E002295F2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		355B236C20165430002295F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		35CB7145201A030400D2C027 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				35CB7145201A030400D2C027 /* ProjectsViewController.swift */,
 				35CB714B201A20E200D2C027 /* SkillsTableViewCell.swift */,
 				35DA45EE20172A14009937FE /* User.swift */,
+				35554167201B78A000E175CF /* Projects2TableViewCell.swift */,
 				35CB7149201A1FE100D2C027 /* SkillsViewController.swift */,
 				35CB7147201A065600D2C027 /* ProjectsTableViewCell.swift */,
 				350C4290201796F100535E6A /* TabBarViewController.swift */,
@@ -195,12 +198,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swifty companion/Pods-swifty companion-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/KJExpandableTableTree/KJExpandableTableTree.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KJExpandableTableTree.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +259,7 @@
 				35E1BF932015D5960005E71A /* ViewController.swift in Sources */,
 				35DA45EF20172A14009937FE /* User.swift in Sources */,
 				35CB714C201A20E200D2C027 /* SkillsTableViewCell.swift in Sources */,
+				35554168201B78A000E175CF /* Projects2TableViewCell.swift in Sources */,
 				35E1BF912015D5960005E71A /* AppDelegate.swift in Sources */,
 				350C4291201796F100535E6A /* TabBarViewController.swift in Sources */,
 				355B236D20165430002295F2 /* ProfileViewController.swift in Sources */,

@@ -9,4 +9,5 @@ target 'swifty companion' do
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
   pod 'GTProgressBar'
+  pod 'KJExpandableTableTree'
 end
