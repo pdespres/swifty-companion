@@ -25,7 +25,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource,  UITableV
         var i: Int = 0
         for p in user!.projects {
             if p.subproj.count < 1 {
-                indices.append("\(user!.projects[i].id).1")
+                indices.append("\(user!.projects[i].id)")
             } else {
                 var j: Int = 0
                 for _ in p.subproj {
@@ -64,7 +64,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource,  UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let node = kjtreeInstance.cellIdentifierUsingTableView(tableView, cellForRowAt: indexPath)
-        
+        print(node.givenIndex)
         if node.givenIndex.index(of: ".") == nil {
             let selectedItem = user?.projects[(user?.projects.index(where: {$0.id == Int(node.givenIndex)!}))!]
             let cellIdentifier = "projectsCell"
@@ -98,7 +98,6 @@ class ProjectsViewController: UIViewController, UITableViewDataSource,  UITableV
 //            let id = Int(node.givenIndex.suffix(indexEndOfText - node.givenIndex.count))
             print("idmaster \(idMaster) id \(id)")
             let proj = user!.projects[(user!.projects.index(where: {$0.id == idMaster}))!]
-            print(proj.subproj)
             let selectedItem = proj.subproj[(proj.subproj.index(where : {$0.id == id}))!]
             let cellIdentifier = "projectsSubCell"
             var cell: Projects2TableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? Projects2TableViewCell
