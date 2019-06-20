@@ -17,8 +17,8 @@ struct Global {
 
 class Token {
     
-    private let key = "90158da8d5d2bafaed0c5a489d8c1a772bf5c70c98e0d84fd41e75b05931e8fa"
-    private let secret = "b17f0315364116d25a866e63e96d0aad30a4ccdfb1736134e0897f58826005b1"
+    private let key = xxx
+    private let secret = xxx
     
     init() {
         APITokenRequest()
